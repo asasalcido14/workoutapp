@@ -1,3 +1,5 @@
+const router = require("../routes/apiroutes");
+
 const API = {
   async getLastWorkout() {
     let res;
@@ -12,13 +14,14 @@ const API = {
   },
   async addExercise(data) {
     const id = location.search.split("=")[1];
-
+// API routes url should be /api/workouts/:id 
+//router.put
     const res = await fetch("/api/workouts/" + id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     });
-
+// app.update
     const json = await res.json();
 
     return json;
@@ -29,6 +32,7 @@ const API = {
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
     });
+    //app.post 
 
     const json = await res.json();
 
