@@ -27,12 +27,15 @@ const workoutSchema = new Schema(
                 },
                 weight: {
                     type: Number,
+                    required: "How much resistance would you like?"
                 },
                 reps: {
                     type: Number,
+                    required: " How many goals do you have for your reps?"
                 },
                 sets: {
                     type: Number,
+                    required: " How many sets do you plan to do?"
                 },
                 distance: {
                     type: Number,
